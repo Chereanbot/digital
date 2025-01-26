@@ -1,9 +1,39 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export default function ServicesPage() {
+  const [particles, setParticles] = useState([]);
+  const [circuitLines, setCircuitLines] = useState([]);
+  
+  useEffect(() => {
+    const generateParticles = () => {
+      return Array.from({ length: 40 }, () => ({
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        width: `${Math.random() * 6 + 2}px`,
+        height: `${Math.random() * 6 + 2}px`,
+        opacity: 0.2 + Math.random() * 0.3,
+        duration: `${5 + Math.random() * 5}s`,
+        delay: `${Math.random() * 3}s`
+      }));
+    };
+
+    const generateCircuitLines = () => {
+      return Array.from({ length: 20 }, () => ({
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        width: `${Math.random() * 100 + 50}px`,
+        rotation: Math.random() * 360,
+        opacity: 0.1 + Math.random() * 0.2
+      }));
+    };
+    
+    setParticles(generateParticles());
+    setCircuitLines(generateCircuitLines());
+  }, []);
+
   return (
     <main className="min-h-screen pt-24">
       {/* Hero Section */}
@@ -64,19 +94,20 @@ export default function ServicesPage() {
 
           {/* Enhanced Particle System */}
           <div className="particle-system">
-            {[...Array(40)].map((_, i) => (
+            {particles.map((particle, i) => (
               <div
                 key={i}
                 className="particle animate-float-particle"
                 style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  width: `${Math.random() * 6 + 2}px`,
-                  height: `${Math.random() * 6 + 2}px`,
-                  background: `radial-gradient(circle, rgba(255,255,255,${0.2 + Math.random() * 0.3}) 0%, transparent 70%)`,
-                  '--duration': `${5 + Math.random() * 5}s`,
-                  animationDelay: `${Math.random() * 3}s`
-                } as any}
+                  left: particle.left,
+                  top: particle.top,
+                  width: particle.width,
+                  height: particle.height,
+                  opacity: particle.opacity,
+                  animationDuration: particle.duration,
+                  animationDelay: particle.delay,
+                  background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)'
+                }}
               />
             ))}
           </div>
@@ -228,20 +259,22 @@ export default function ServicesPage() {
         {/* Background Elements */}
         <div className="absolute inset-0">
           {/* Circuit Board Pattern */}
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute bg-gradient-to-r from-white/5 to-transparent"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                width: `${Math.random() * 100 + 50}px`,
-                height: '1px',
-                transform: `rotate(${Math.random() * 360}deg)`,
-                opacity: 0.1 + Math.random() * 0.2
-              }}
-            />
-          ))}
+          <div className="absolute inset-0">
+            {circuitLines.map((line, i) => (
+              <div
+                key={i}
+                className="absolute bg-gradient-to-r from-white/5 to-transparent"
+                style={{
+                  left: line.left,
+                  top: line.top,
+                  width: line.width,
+                  height: '1px',
+                  transform: `rotate(${line.rotation}deg)`,
+                  opacity: line.opacity
+                }}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
