@@ -2,6 +2,11 @@
 
 import Image from 'next/image';
 
+interface StyleProps extends React.CSSProperties {
+  '--skew-x'?: string;
+  animationDelay: string;
+}
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen pt-24">
@@ -26,13 +31,13 @@ export default function AboutPage() {
           <div className="absolute bottom-0 left-0 right-0 h-[60vh] overflow-hidden">
             {/* First Mountain */}
             <div className="absolute bottom-0 left-[-10%] w-[50%] h-[70%] bg-white/10 backdrop-blur-sm transform -skew-x-12 animate-mountain-rise" 
-                 style={{ animationDelay: '0.2s', '--skew-x': '-12deg' } as any}></div>
+                 style={{ animationDelay: '0.2s', '--skew-x': '-12deg' } as StyleProps}></div>
             {/* Second Mountain */}
             <div className="absolute bottom-0 left-[20%] w-[50%] h-[85%] bg-white/20 backdrop-blur-sm transform skew-x-12 animate-mountain-rise"
-                 style={{ animationDelay: '0.4s', '--skew-x': '12deg' } as any}></div>
+                 style={{ animationDelay: '0.4s', '--skew-x': '12deg' } as StyleProps}></div>
             {/* Third Mountain */}
             <div className="absolute bottom-0 right-[-10%] w-[50%] h-[60%] bg-white/15 backdrop-blur-sm transform -skew-x-12 animate-mountain-rise"
-                 style={{ animationDelay: '0.6s', '--skew-x': '-12deg' } as any}></div>
+                 style={{ animationDelay: '0.6s', '--skew-x': '-12deg' } as StyleProps}></div>
             
             {/* Animated Lines */}
             <div className="absolute inset-0">
@@ -75,7 +80,7 @@ export default function AboutPage() {
             About Digital Aksumite
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto animate-enhanced-fade-in" style={{ animationDelay: '0.2s' }}>
-            Founded on visionary ideas to revolutionize Ethiopia's technological landscape, empowering the nation through innovative systems and solutions.
+            Founded on visionary ideas to revolutionize Ethiopia&apos;s technological landscape, empowering the nation through innovative systems and solutions.
           </p>
         </div>
 
@@ -99,7 +104,7 @@ export default function AboutPage() {
           <h2 className="text-4xl font-bold mb-12 gradient-text text-glow text-center">Our Story</h2>
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl enhanced-shadow">
             <p className="text-lg text-gray-100 leading-relaxed mb-6">
-              Digital Aksumite was founded on the visionary ideas of Biniam Shimeles, who sought to revolutionize Ethiopia's technological landscape. This vision was later shared with co-founder Solomon Eshetu, and in 2017 EC (2024 GC), the PLC was officially established.
+              Digital Aksumite was founded on the visionary ideas of Biniam Shimeles, who sought to revolutionize Ethiopia&apos;s technological landscape. This vision was later shared with co-founder Solomon Eshetu, and in 2017 EC (2024 GC), the PLC was officially established.
             </p>
             <p className="text-lg text-gray-100 leading-relaxed">
               Soon after, Cherinet Afewerk and Misganaw Eshetu joined the team. Together, they created a dynamic and collaborative company driven by young, curious developers and managers who are passionate about making Ethiopia a hub of innovation and progress.

@@ -3,12 +3,35 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
+interface Particle {
+  left: string;
+  top: string;
+  width: string;
+  height: string;
+  opacity: number;
+  duration: string;
+  delay: string;
+}
+
+interface CircuitLine {
+  left: string;
+  top: string;
+  width: string;
+  rotation: number;
+  opacity: number;
+}
+
+interface StyleProps extends React.CSSProperties {
+  '--skew-x'?: string;
+  animationDelay: string;
+}
+
 export default function ServicesPage() {
-  const [particles, setParticles] = useState([]);
-  const [circuitLines, setCircuitLines] = useState([]);
+  const [particles, setParticles] = useState<Particle[]>([]);
+  const [circuitLines, setCircuitLines] = useState<CircuitLine[]>([]);
   
   useEffect(() => {
-    const generateParticles = () => {
+    const generateParticles = (): Particle[] => {
       return Array.from({ length: 40 }, () => ({
         left: `${Math.random() * 100}%`,
         top: `${Math.random() * 100}%`,
@@ -20,7 +43,7 @@ export default function ServicesPage() {
       }));
     };
 
-    const generateCircuitLines = () => {
+    const generateCircuitLines = (): CircuitLine[] => {
       return Array.from({ length: 20 }, () => ({
         left: `${Math.random() * 100}%`,
         top: `${Math.random() * 100}%`,
@@ -60,19 +83,19 @@ export default function ServicesPage() {
             
             {/* First Mountain */}
             <div className="absolute bottom-0 left-[-10%] w-[50%] h-[70%] bg-gradient-to-tr from-white/5 to-white/10 backdrop-blur-sm transform -skew-x-12 animate-mountain-rise" 
-                 style={{ animationDelay: '0.2s', '--skew-x': '-12deg' } as any}>
+                 style={{ animationDelay: '0.2s', '--skew-x': '-12deg' } as StyleProps}>
               <div className="absolute top-0 left-[20%] w-[60%] h-[20%] bg-gradient-to-t from-white/10 to-transparent transform -skew-x-12"></div>
             </div>
             
             {/* Second Mountain */}
             <div className="absolute bottom-0 left-[20%] w-[50%] h-[85%] bg-gradient-to-tr from-white/10 to-white/20 backdrop-blur-sm transform skew-x-12 animate-mountain-rise"
-                 style={{ animationDelay: '0.4s', '--skew-x': '12deg' } as any}>
+                 style={{ animationDelay: '0.4s', '--skew-x': '12deg' } as StyleProps}>
               <div className="absolute top-0 right-[20%] w-[60%] h-[30%] bg-gradient-to-t from-white/15 to-transparent transform skew-x-12"></div>
             </div>
             
             {/* Third Mountain */}
             <div className="absolute bottom-0 right-[-10%] w-[50%] h-[60%] bg-gradient-to-tr from-white/5 to-white/15 backdrop-blur-sm transform -skew-x-12 animate-mountain-rise"
-                 style={{ animationDelay: '0.6s', '--skew-x': '-12deg' } as any}>
+                 style={{ animationDelay: '0.6s', '--skew-x': '-12deg' } as StyleProps}>
               <div className="absolute top-0 left-[30%] w-[40%] h-[25%] bg-gradient-to-t from-white/10 to-transparent transform -skew-x-12"></div>
             </div>
 

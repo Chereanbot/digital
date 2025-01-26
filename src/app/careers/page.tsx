@@ -3,6 +3,11 @@
 import React from 'react';
 import Image from 'next/image';
 
+interface StyleProps extends React.CSSProperties {
+  '--skew-x'?: string;
+  animationDelay: string;
+}
+
 export default function CareersPage() {
   return (
     <main className="min-h-screen pt-24">
@@ -27,13 +32,13 @@ export default function CareersPage() {
           <div className="absolute bottom-0 left-0 right-0 h-[60vh] overflow-hidden">
             {/* First Mountain */}
             <div className="absolute bottom-0 left-[-10%] w-[50%] h-[70%] bg-gradient-to-tr from-white/5 to-white/10 backdrop-blur-sm transform -skew-x-12 animate-mountain-rise" 
-                 style={{ animationDelay: '0.2s', '--skew-x': '-12deg' } as any}></div>
+                 style={{ animationDelay: '0.2s', '--skew-x': '-12deg' } as StyleProps}></div>
             {/* Second Mountain */}
             <div className="absolute bottom-0 left-[20%] w-[50%] h-[85%] bg-gradient-to-tr from-white/10 to-white/20 backdrop-blur-sm transform skew-x-12 animate-mountain-rise"
-                 style={{ animationDelay: '0.4s', '--skew-x': '12deg' } as any}></div>
+                 style={{ animationDelay: '0.4s', '--skew-x': '12deg' } as StyleProps}></div>
             {/* Third Mountain */}
             <div className="absolute bottom-0 right-[-10%] w-[50%] h-[60%] bg-gradient-to-tr from-white/5 to-white/15 backdrop-blur-sm transform -skew-x-12 animate-mountain-rise"
-                 style={{ animationDelay: '0.6s', '--skew-x': '-12deg' } as any}></div>
+                 style={{ animationDelay: '0.6s', '--skew-x': '-12deg' } as StyleProps}></div>
           </div>
 
           {/* Particle System */}
