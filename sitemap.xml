@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://digitalaksumite.vercel.app/</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+         <image:image>
+            <image:loc>https://digitalaksumite.vercel.app/assets/team/cherinet-afewerk.jpg</image:loc>
+            <image:title>Cherinet Afewerk - Lead Developer</image:title>
+            <image:caption>Lead developer and system architect</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://digitalaksumite.vercel.app/assets/og-image.jpg</image:loc>
+            <image:title>Digital Aksumite - Leading Ethiopian Technology Company</image:title>
+            <image:caption>Digital Aksumite combines ancient Ethiopian heritage with modern technology</image:caption>
+            <image:geo_location>Addis Ababa, Ethiopia</image:geo_location>
+        </image:image>
+        <image:image>
+            <image:loc>https://digitalaksumite.vercel.app/assets/team/biniam-shimeles.jpg</image:loc>
+            <image:title>Biniam Shimeles - Founder & CEO</image:title>
+            <image:caption>Visionary leader of Digital Aksumite</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://digitalaksumite.vercel.app/assets/team/solomon-eshetu.jpg</image:loc>
+            <image:title>Solomon Eshetu - Co-founder</image:title>
+            <image:caption>Technical expert and innovation leader</image:caption>
+        </image:image>
+       
+        <image:image>
+            <image:loc>https://digitalaksumite.vercel.app/assets/team/misganaw-eshetu.jpg</image:loc>
+            <image:title>Misganaw Eshetu - Marketing Director</image:title>
+            <image:caption>Marketing and business development expert</image:caption>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://digitalaksumite.vercel.app/#about</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://digitalaksumite.vercel.app/#services</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://digitalaksumite.vercel.app/assets/services/system-development.jpg</image:loc>
+            <image:title>Digital Aksumite System Development Services</image:title>
+            <image:caption>Advanced surveillance and security systems</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://digitalaksumite.vercel.app/assets/services/software-solutions.jpg</image:loc>
+            <image:title>Digital Aksumite Software Solutions</image:title>
+            <image:caption>Custom software development and enterprise solutions</image:caption>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://digitalaksumite.vercel.app/#team</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://digitalaksumite.vercel.app/#careers</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://digitalaksumite.vercel.app/#contact</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset> 

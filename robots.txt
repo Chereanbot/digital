@@ -1,0 +1,23 @@
+# www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://digitalaksumite.vercel.app/sitemap.xml
+
+# Optimize crawling
+Crawl-delay: 1
+
+# Allow all bots to index images
+Allow: /assets/
+Allow: /images/
+
+# Social media verification
+Allow: /*.html
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.ico 
